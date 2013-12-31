@@ -1,4 +1,38 @@
 # Tower of Hanoi solver
+#
+# Sample output:
+# solve(5)
+#    1 to 3
+#    1 to 2
+#    3 to 2
+#    1 to 3
+#    2 to 1
+#    2 to 3
+#    1 to 3
+#    1 to 2
+#    3 to 2
+#    3 to 1
+#    2 to 1
+#    3 to 2
+#    1 to 3
+#    1 to 2
+#    3 to 2
+#    1 to 3
+#    2 to 1
+#    2 to 3
+#    1 to 3
+#    2 to 1
+#    3 to 2
+#    3 to 1
+#    2 to 1
+#    2 to 3
+#    1 to 3
+#    1 to 2
+#    3 to 2
+#    1 to 3
+#    2 to 1
+#    2 to 3
+#    1 to 3
 
 class Tower(list):
     def __init__(self, *args):
