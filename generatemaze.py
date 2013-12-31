@@ -19,14 +19,14 @@ def generate(maze, height, width):
     needVisit, stack = height*width-1, [(y, x)]
     maze[y][x] = ' '
     while (needVisit > 0):
-        unvisited = [(dy, dx) for dy, dx in dirs 
-                     if 0 <= y+2*dy < len(maze)  and 0 <= x+2*dx < len(maze[0]) 
-                     and maze[y+2*dy][x+2*dx] == '*'] 
+        unvisited = [(dy, dx) for dy, dx in dirs
+                     if 0 <= y+2*dy < len(maze)  and 0 <= x+2*dx < len(maze[0])
+                     and maze[y+2*dy][x+2*dx] == '*']
         if not unvisited:
             y, x = stack.pop(); continue
         dy, dx = random.choice(unvisited)
         maze[y+dy][x+dx] = ' '
-        y, x = y + 2*dy, x + 2*dx 
+        y, x = y + 2*dy, x + 2*dx
         maze[y][x] = ' '
         stack.append((y, x))
         needVisit -= 1
@@ -34,7 +34,8 @@ def generate(maze, height, width):
 
 def printmaze(maze):
     for row in maze:
-        print ' '.join(row)
+        print(' '.join(row))
 
-printmaze(makemaze(15, 20))
-        
+if __name__ == '__main__':
+    printmaze(makemaze(15, 20))
+
